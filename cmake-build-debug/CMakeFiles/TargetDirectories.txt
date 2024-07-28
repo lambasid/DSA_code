@@ -1,0 +1,3 @@
+/Users/siddharthlamba/GIT/C/DSA_code/cmake-build-debug/CMakeFiles/DSA_code.dir
+/Users/siddharthlamba/GIT/C/DSA_code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/siddharthlamba/GIT/C/DSA_code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
