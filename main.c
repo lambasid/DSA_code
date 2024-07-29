@@ -128,3 +128,20 @@ void print(void) {
         printf("%7d            %-14s%7d\n", p->number, p->name, p->on_hand);
     }
 }
+
+int read_int(const char *prompt) {
+    int input;
+    printf("%s", prompt);
+    while (scanf("%d", &input) != 1) {
+        while (getchar() != '\n') ;  // clear invalid input from buffer
+        printf("Invalid input. Please enter an integer: ");
+    }
+    return input;
+}
+
+//this limits the number of characters shown in output
+void read_string(const char *prompt, char *str, int max_len) {
+    printf("%s", prompt);
+    scanf("%14s", str);
+    while (getchar() != '\n') ;
+}
