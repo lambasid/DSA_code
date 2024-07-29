@@ -118,3 +118,13 @@ void update(void) {
     } else
         printf("Part not found.\n");
 }
+
+//declaring print function
+void print(void) {
+    struct part *p;
+
+    printf("|Part Number|   |Part Name|    |Quantity on Hand|\n");
+    for (p = inventory; p != NULL; p = p->next) {
+        printf("%7d            %-14s%7d\n", p->number, p->name, p->on_hand);
+    }
+}
