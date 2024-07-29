@@ -17,3 +17,14 @@ struct part {
     int on_hand;
     struct part *next;
 };
+
+struct part *inventory = NULL;
+
+// Defining functions so that the compiler know these are the functions used
+struct part *find_part(int number);
+void insert(void);
+void search(void);
+void update(void);
+void print(void);
+int read_int(const char *prompt);
+void read_string(const char *prompt, char *str, int max_len);
