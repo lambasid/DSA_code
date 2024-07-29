@@ -65,4 +65,14 @@ void insert(void) {
         printf("Database is full; no new parts can be added.\n");
         return;
     }
+
+    new_part->number = read_int("Enter part number: ");
+    for (cur = inventory, prev = NULL; cur != NULL && new_part->number > cur->number; prev = cur, cur = cur->next);
+
+    if (cur != NULL && new_part->number == cur->number) {
+        printf("Part already exists.\n");
+        free(new_part);
+        return;
+    }
+
 }
