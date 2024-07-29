@@ -55,3 +55,14 @@ int main(void) {
         printf("\n");
     }
 }
+
+//declaring insert function
+void insert(void) {
+    struct part *new_part, *prev, *cur;
+
+    new_part = (struct part *) malloc(sizeof(struct part));
+    if (new_part == NULL) {
+        printf("Database is full; no new parts can be added.\n");
+        return;
+    }
+}
