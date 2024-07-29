@@ -28,3 +28,30 @@ void update(void);
 void print(void);
 int read_int(const char *prompt);
 void read_string(const char *prompt, char *str, int max_len);
+
+int main(void) {
+    char code;
+
+    printf("**** Warehouse Inventory Management by Siddharth Lamba ****\n");
+    while (1) {
+        printf("Enter operation code (i(insert), s(search or find), u(update), p(print), q(quit): ");
+        scanf(" %c", &code);
+        // Only takes 1st character from the input
+        while (getchar() != '\n')
+            ;
+
+        switch (tolower(code)) {
+            case 'i': insert();
+                break;
+            case 's': search();
+                break;
+            case 'u': update();
+                break;
+            case 'p': print();
+                break;
+            case 'q': return 0;
+            default:  printf("Illegal input. Please enter i, s, u, p, or q.\n"); //Error Validation
+        }
+        printf("\n");
+    }
+}
