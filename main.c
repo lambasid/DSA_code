@@ -106,3 +106,15 @@ struct part *find_part(int number) {
         return p;
     return NULL;
 }
+
+//declaring update function
+void update(void) {
+    int number = read_int("Enter part number: ");
+    struct part *p = find_part(number);
+
+    if (p != NULL) {
+        int change = read_int("Enter change in quantity on hand(or total current quantity): ");
+        p->on_hand = change;
+    } else
+        printf("Part not found.\n");
+}
