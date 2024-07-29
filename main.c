@@ -75,4 +75,16 @@ void insert(void) {
         return;
     }
 
+    read_string("Enter part name: ", new_part->name, NAME_LEN);
+    new_part->on_hand = read_int("Enter quantity on hand: ");
+    new_part->next = cur;
+
+    if (prev == NULL)
+        inventory = new_part;
+    else
+        prev->next = new_part;
+}
+
+
+
 }
