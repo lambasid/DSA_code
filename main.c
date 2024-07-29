@@ -1,6 +1,19 @@
-#include <stdio.h>
 
-int main(void) {
-    printf("Hello!\n");
-    return 0;
-}
+//Inventory management system using linked list and structures
+//Siddharth Lamba
+//Assignment #3
+//Date: 18 July 2024
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#define NAME_LEN 20
+
+struct part {
+    int number;
+    char name[NAME_LEN+1];
+    int on_hand;
+    struct part *next;
+};
