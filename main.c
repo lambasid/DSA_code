@@ -85,6 +85,24 @@ void insert(void) {
         prev->next = new_part;
 }
 
+//declaring search function
+void search(void) {
+    int number = read_int("Enter part number: ");
+    struct part *p = find_part(number);
 
+    if (p != NULL)
+        printf("Part name: %s\nQuantity on hand: %d\n", p->name, p->on_hand);
+    else
+        printf("Part not found.\n");
+}
 
+struct part *find_part(int number) {
+    struct part *p;
+
+    for (p = inventory; p != NULL && number > p->number; p = p->next)
+        ;
+
+    if (p != NULL && number == p->number)
+        return p;
+    return NULL;
 }
